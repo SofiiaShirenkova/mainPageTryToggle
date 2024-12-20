@@ -1,150 +1,158 @@
 
-        * {
-        box-sizing: border-box;
-        }
-
-        html,
-        body {
-        height: 100%;
-        margin: 0;
-        font-family: 'EB Garamond';
-        font-weight: 500;
-        }
-
-        ul, li{
-            font-size: 1.8vw;
-            color: rgba(246, 255, 0, 1);
-        }
-
-
-    .mainPageBlock{
-        display: flex; 
-        flex-direction: row; 
-        width: 100%; 
-        height: 100%;
-        font-family: 'EB Garamond';
-        font-weight: 500;
+* {
+    box-sizing: border-box;
     }
 
-    .header{
-        height: 100%; 
-        background-color: rgba(170, 151, 74, 1); 
-        display: flex; 
-        justify-content: space-between; 
-        flex-direction: row;
-        transition: 0.8s ease-in-out; /* Плавное изменение ширины */
+    html,
+    body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'EB Garamond';
+    font-weight: 500;
     }
 
-    #div_menu{
-        display: none;
-        justify-content: space-between;
-        flex-direction: column;
-        transition: 0.8s ease-in-out; /* Плавное изменение ширины */
-    }
-
-    #div_bar{
-        border: 1px solid black;
-        transition: 0.8s ease-in-out; /* Плавное изменение ширины */
-        cursor: pointer;
+    ul, li{
+        font-size: 1.8vw;
+        color: rgba(246, 255, 0, 1);
     }
 
 
+.mainPageBlock{
+    display: flex; 
+    flex-direction: row; 
+    width: 100%; 
+    height: 100%;
+    font-family: 'EB Garamond';
+    font-weight: 500;
+}
 
-    #logoStyle{
-        width: 100%; 
-        padding: 0.5rem; 
+.header{
+    height: 100%; 
+    background-color: rgba(170, 151, 74, 1); 
+    display: flex; 
+    justify-content: space-between; 
+    flex-direction: row;
+    transition: 0.8s ease-in-out; /* Плавное изменение ширины */
+}
+
+#div_menu{
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: 0.8s ease-in-out; /* Плавное изменение ширины */
+}
+
+#div_bar{
+    border: 1px solid black;
+    transition: 0.8s ease-in-out; /* Плавное изменение ширины */
+    cursor: pointer;
+    align-content: center;
+}
+
+#arrow{
+    display: flex;
+    -webkit-transform: rotate(180deg); /* Поворачиваем изображение на 45 градусов для браузеров WebKit */
+    -moz-transform: rotate(180deg); /* Поворачиваем изображение на 45 градусов для Mozilla Firefox */
+    transform: rotate(180deg); /* Основной стиль, который будет работать во всех современных браузерах */
+}
+
+
+
+#logoStyle{
+    width: 100%; 
+    padding: 0.5rem; 
+}
+
+.header{
+    ul{
+        padding-left: 0.5rem
     }
 
-    .header{
-        ul{
-            padding-left: 0.5rem
-        }
-
-        li{
-            list-style-type: none;
-        }
+    li{
+        list-style-type: none;
     }
+}
 
 
-    #designBlockMainPage{
-        width: 30%; 
-        background-color: rgba(217, 217, 217, 1); 
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-        align-content: center;
-        cursor: pointer;
-        transition: 0.8s;
+#designBlockMainPage{
+    width: 30%; 
+    background-color: rgba(217, 217, 217, 1); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    transition: 0.8s;
 
-        img{
-            height: 95%;
-            max-width: 100%;
-        }
+    img{
+        height: 95%;
+        max-width: 100%;
     }
+}
 
-    #cultureBlockMainPage{
-        width: 30%; 
-        background-color: rgba(255, 255, 255, 1); 
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-        cursor: pointer;
-        transition: 0.8s;
+#cultureBlockMainPage{
+    width: 30%; 
+    background-color: rgba(255, 255, 255, 1); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
 
-        img{
-            height: 95%;
-            max-width: 100%;
-        }
+    img{
+        height: 95%;
+        max-width: 100%;
     }
+}
 
 
-    #architectureBlockMainPage{
-        width: 30%; 
-        background-color: rgba(217, 217, 217, 1); 
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-        cursor: pointer;
-        transition: 0.8s;
+#architectureBlockMainPage{
+    width: 30%; 
+    background-color: rgba(217, 217, 217, 1); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
 
-        img{
-            height: 95%;
-            max-width: 100%;
-        }
+    img{
+        height: 95%;
+        max-width: 100%;
     }
+}
 
-    #artsBlockMainPage{
-        width: 30%; 
-        background-color: rgba(255, 255, 255, 1); 
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-        cursor: pointer;
-        transition: 0.8s;
+#artsBlockMainPage{
+    width: 30%; 
+    background-color: rgba(255, 255, 255, 1); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
 
-        img{
-            height: 95%;
-            max-width: 100%;
-        }
+    img{
+        height: 95%;
+        max-width: 100%;
     }
+}
 
-    
-    #designBlockMainPage:hover {
-        background-color: rgba(246, 255, 0, 1);
-        transition: 0.8s;
-    }
-    
-    #cultureBlockMainPage:hover {
-        background-color: rgba(246, 255, 0, 1);
-        transition: 0.8s;
-    }
-    
-    #architectureBlockMainPage:hover {
-        background-color: rgba(246, 255, 0, 1);
-        transition: 0.8s;
-    }
 
-    #artsBlockMainPage:hover {
-        background-color: rgba(246, 255, 0, 1);
-        transition: 0.8s;
-    }
+#designBlockMainPage:hover {
+    background-color: rgba(246, 255, 0, 1);
+    transition: 0.8s;
+}
+
+#cultureBlockMainPage:hover {
+    background-color: rgba(246, 255, 0, 1);
+    transition: 0.8s;
+}
+
+#architectureBlockMainPage:hover {
+    background-color: rgba(246, 255, 0, 1);
+    transition: 0.8s;
+}
+
+#artsBlockMainPage:hover {
+    background-color: rgba(246, 255, 0, 1);
+    transition: 0.8s;
+}

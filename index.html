@@ -35,7 +35,9 @@
 
 
             <div id="div_bar">
-                <p>close\open &nbsp;</p>
+                <div id="arrow">
+                    <img id="arrow" src="./img/arrow.svg">
+                </div>
             </div>
         </div>
 
@@ -63,21 +65,24 @@
 <script>    
     function toggleMenu() {
       const div_bar = document.getElementById('div_bar');
+        const arrow = document.getElementById('arrow');
       const div_menu = document.getElementById('div_menu');
-      const otherDivs = document.querySelectorAll('#designBlockMainPage,#cultureBlockMainPage,#architectureBlockMainPage,#artsBlockMainPage');
+      const otherDivs = document.querySelectorAll('#designBlockMainPage, #cultureBlockMainPage, #architectureBlockMainPage, #artsBlockMainPage');
     
       if (div_menu.style.display === 'none') {
         // Открываем меню
         div_menu.style.display = 'flex';
         div_bar.classList.add('active');
         otherDivs.forEach(div => div.style.width = '30%');
-        div_menu.style.width = '50%'
+        div_menu.style.width = '50%';
+        arrow.style.transform = 'rotate(0deg)';
       } else {
         // Закрываем меню
         div_menu.style.display = 'none';
         div_bar.classList.remove('active');
         otherDivs.forEach(div => div.style.width = '90%');
-        div_menu.style.width = '0%'
+        div_menu.style.width = '0%';
+        arrow.style.transform = 'rotate(180deg)';
       }
     }
 
