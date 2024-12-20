@@ -51,9 +51,6 @@
 
 #arrow{
     display: flex;
-    -webkit-transform: rotate(180deg); /* Поворачиваем изображение на 45 градусов для браузеров WebKit */
-    -moz-transform: rotate(180deg); /* Поворачиваем изображение на 45 градусов для Mozilla Firefox */
-    transform: rotate(180deg); /* Основной стиль, который будет работать во всех современных браузерах */
 }
 
 
