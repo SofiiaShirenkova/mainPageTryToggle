@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/aboutUs.css">
+    <link rel="stylesheet" href="./stylesheets/stylesheet.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mainPageBlock">
+
+        <div class="header">
+
+            <div id="div_menu" class="hidden">
+                <img id="logoStyle" src="img/Консерва.webp">
+                <ul>
+                    <li>О нас</li>
+                    <li>Манифесты
+                    <ol type="i" >
+                        <li>i. Дизайн</li>
+                        <li>ii. Культура</li>
+                        <li>iii. Архитектура</li>
+                        <li>iv. Живопись</li>
+                    </ol>
+                    </li>
+                    <li>Стайлгайд</li>
+                    <li>Рефлексия</li><br>
+                    <li>вк / телеграм</li>
+                </ul>
+            </div>
+
+
+            <div id="div_bar">
+                <p>close\open &nbsp;</p>
+            </div>
+        </div>
+
+        <div id="designBlockMainPage">
+            <img src="img/imgDesignMainPage.webp">
+        </div>
+
+        <div id="cultureBlockMainPage">
+            <img src="img/imgCultureMainPage.webp">
+        </div>
+
+        <div id="architectureBlockMainPage">
+            <img src="img/imgArchitectureMainPage.webp">
+        </div>
+
+        <div id="artsBlockMainPage">
+            <img src="img/imgArtsMainPage.webp">
+        </div>
+        
+    </div>
+</body>
+</html>
+
+
+<script>    
+    function toggleMenu() {
+      const div_bar = document.getElementById('div_bar');
+      const div_menu = document.getElementById('div_menu');
+      const otherDivs = document.querySelectorAll('#designBlockMainPage,#cultureBlockMainPage,#architectureBlockMainPage,#artsBlockMainPage');
+    
+      if (div_menu.style.display === 'none') {
+        // Открываем меню
+        div_menu.style.display = 'flex';
+        div_bar.classList.add('active');
+        otherDivs.forEach(div => div.style.width = '30%');
+        div_menu.style.width = '50%'
+      } else {
+        // Закрываем меню
+        div_menu.style.display = 'none';
+        div_bar.classList.remove('active');
+        otherDivs.forEach(div => div.style.width = '90%');
+        div_menu.style.width = '0%'
+      }
+    }
+
+    document.getElementById('div_bar').addEventListener('click', toggleMenu);
+
+</script>
