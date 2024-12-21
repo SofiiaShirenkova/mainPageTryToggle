@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheets/aboutUs.css">
     <link rel="stylesheet" href="./stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="./stylesheets/adaptive.css">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
 
         <div class="header">
 
-            <div id="div_menu" class="hidden">
+            <div id="div_menu" style="display: none;" class="hidden">
                 <img id="logoStyle" src="img/Консерва.webp">
                 <ul>
                     <li>О нас</li>
@@ -35,7 +36,7 @@
 
 
             <div id="div_bar">
-                <div id="arrow">
+                <div id="arrow" onclick="transformArrow()">
                     <img id="arrow" src="./img/arrow.svg">
                 </div>
             </div>
@@ -80,7 +81,7 @@
         // Закрываем меню
         div_menu.style.display = 'none';
         div_bar.classList.remove('active');
-        otherDivs.forEach(div => div.style.width = '90%');
+        otherDivs.forEach(div => div.style.width = '100%');
         div_menu.style.width = '0%';
         arrow.style.transform = 'rotate(180deg)';
       }
@@ -89,3 +90,4 @@
     document.getElementById('div_bar').addEventListener('click', toggleMenu);
 
 </script>
+
